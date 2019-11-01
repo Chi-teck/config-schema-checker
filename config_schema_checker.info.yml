@@ -1,6 +1,7 @@
 name: Config schema checker
 type: module
 core: 8.x
+core_version_requirement: ^8 || ^9
 description: Listens to the config save event and validates schema.
 package: Development
 dependencies:
