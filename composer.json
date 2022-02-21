@@ -1,7 +1,12 @@
 {
-  "name": "chi-teck/config_schema_checker",
-  "description": "Drupal module to check configuration schema.",
-  "type": "drupal-module",
-  "keywords": ["Drupal"],
-  "license": "GPL-2.0+"
+    "name": "chi-teck/config_schema_checker",
+    "description": "Drupal module to check configuration schema.",
+    "type": "drupal-module",
+    "keywords": [
+        "Drupal"
+    ],
+    "license": "GPL-2.0+",
+    "require": {
+        "php": ">=8.0.0"
+    }
 }
