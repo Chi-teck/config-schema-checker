@@ -6,20 +6,14 @@ use Drupal\Core\Config\ConfigCrudEvent;
 use Drupal\Core\Config\Schema\SchemaIncompleteException;
 use Drupal\Core\Config\Development\ConfigSchemaChecker as BaseChecker;
 
-/**
- * Config schema checker event subscriber.
- */
-class ConfigSchemaChecker extends BaseChecker {
+final class ConfigSchemaChecker extends BaseChecker {
 
-  /**
-   * {@inheritdoc}
-   */
-  public function onConfigSave(ConfigCrudEvent $event) {
+  public function onConfigSave(ConfigCrudEvent $event): void {
     try {
       parent::onConfigSave($event);
     }
     catch (SchemaIncompleteException $exception) {
-      trigger_error($exception->getMessage(), E_USER_WARNING);
+      \trigger_error($exception->getMessage(), \E_USER_WARNING);
     }
   }
 
