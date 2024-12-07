@@ -6,8 +6,14 @@ use Drupal\Core\Config\ConfigCrudEvent;
 use Drupal\Core\Config\Schema\SchemaIncompleteException;
 use Drupal\Core\Config\Development\ConfigSchemaChecker as BaseChecker;
 
+/**
+ * {@selfdoc}
+ */
 final class ConfigSchemaChecker extends BaseChecker {
 
+  /**
+   * {@inheritdoc}
+   */
   public function onConfigSave(ConfigCrudEvent $event): void {
     try {
       parent::onConfigSave($event);
